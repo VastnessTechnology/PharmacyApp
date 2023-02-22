@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_vital_Details_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_vital_Details_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_vital_Details_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_vital_Details_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_vital_Details_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_vital_Details_tootlbar_view"
+        android:layout_above="@+id/fragment_Add_vital_textview_show_all"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/fragment_vital_Details_vital_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+           android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_10sdp" />
+
+
+        <LinearLayout
+            android:id="@+id/fragment_vital_Details_lntablayout"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/fragment_vital_Details_vital_name"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/fragment_vital_Details_tablayout"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                app:tabIndicatorColor="@color/parrot_green"
+                app:tabMode="fixed" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/fragment_vital_Details_pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/fragment_vital_Details_textdisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_vital_Details_TodayVital"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_vital_Details_lntablayout"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/fragment_vital_Details_avg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/parrot_green"
+                android:textSize="@dimen/_10sdp" />
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/fragment_vital_Details_Today"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="left"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:text=""-->
+<!--                android:textColor="@color/parrot_green"-->
+<!--                android:textSize="@dimen/_15sdp" />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:padding="@dimen/_5sdp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/fragment_vital_Details_avg"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text=""-->
+<!--                    android:textColor="@color/parrot_green"-->
+<!--                    android:textSize="@dimen/_15sdp" />-->
+<!--            </LinearLayout>-->
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fragment_Add_vital_textview_show_all"
+        style="@style/text_normal_white_18"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@drawable/commmon_button"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/Show_all" />
+</RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_find_substitutes_leanr_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/seperator_color">
+
+
+    <include
+        android:id="@+id/fragment_find_substitutes_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_find_substitutes_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_find_substitutes_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <TextView
+        android:id="@+id/fragment_find_substitutes_textview_no_data"
+        style="@style/text_normal_black_18"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/_5sdp"
+        android:layout_centerInParent="true"
+        android:text="@string/search_result_not_found"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/fragment_find_substitutes_relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_find_substitutes_tootlbar_view"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/white"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:weightSum="2"
+        android:layout_marginBottom="@dimen/_3sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.4">
+
+            <ImageView
+                android:id="@+id/fragment_find_substitutes_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:focusable="false"
+                android:src="@drawable/ic_med" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.6">
+
+
+            <RelativeLayout
+                android:id="@+id/fragment_find_substitutes_linear_catalog_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:focusable="false"
+                android:clickable="false"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/fragment_find_substitutes_linear_catalog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/fragment_find_substitutes_textview__medicine_name"
+                        style="@style/text_normal_black_18"
+                        android:clickable="false"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:maxWidth="@dimen/_200sdp"
+                        android:maxLines="2"
+                        android:singleLine="false"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <TextView
+                        android:id="@+id/fragment_find_substitutes_textview_menufacture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text=""
+                        android:textColor="@color/nev_title_color"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/fragment_find_substitutes_textview_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text=""
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/fragment_find_substitutes_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:visibility="gone"
+        android:layout_below="@+id/fragment_find_substitutes_relative_main"
+        android:background="@color/gray" />
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_find_substitutes_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_find_substitutes_relative_main"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_2sdp">
+
+        <TextView
+            android:id="@+id/fragment_find_substitutes_title_textview"
+            style="@style/text_normal_black_18"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="Substitutes"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:textSize="@dimen/_13sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_find_substitutes_recycleview"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_below="@+id/fragment_find_substitutes_title_textview"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

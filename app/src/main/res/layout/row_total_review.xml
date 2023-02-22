@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/rowshadow"
+        android:padding="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:id="@+id/row_review_linear_catalog_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/row_review_textview_subtotal"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/total_mrp"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/row_review_textview_item_subtotal_total"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:text=""
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:id="@+id/row_subtotal_discount"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/row_review_textview_Discount"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/discount"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/row_review_textview_item_subtotal_Discout"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:text="- "
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/fragment_review_view"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:visibility="gone"
+                    android:background="@color/seperator_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/row_review_relative_coupen_discount"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/row_review_textview_Discount_coupen"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/coupe_discount"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/row_review_textview_item_Discout_coupen_value"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:text="- 100"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/fragment_review_view_coupen"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:visibility="gone"
+                    android:background="@color/seperator_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/row_review_relative_shipping_charge"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/row_review_textview_shipping_charge"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/shipping_charge"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/row_review_textview_item_shipping_charge"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:text=""
+                        android:paddingRight="@dimen/_5sdp"
+                        android:textSize="@dimen/_10sdp"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/fragment_review_view_shipping"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_height="@dimen/_3sdp"
+                    android:background="@color/seperator_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@color/nev_bg_color"
+                    android:layout_marginTop="@dimen/_18sdp">
+
+                    <TextView
+                        android:id="@+id/row_review_textview_shipping_gross_total"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/gross_total"
+                        android:textColor="@color/parrot_green"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:id="@+id/row_review_textview_item_gross_total"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:text=""
+                        android:paddingRight="@dimen/_5sdp"
+                        android:textSize="@dimen/_10sdp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

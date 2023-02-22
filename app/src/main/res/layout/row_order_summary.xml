@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/row_suggestion_relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/rowshadow"
+        android:layout_margin="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:id="@+id/row_my_order_relative_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:padding="@dimen/_1sdp">
+            <TextView
+                android:id="@+id/row__order_item_textview_medicine_name"
+                style="@style/text_normal_black_18"
+                android:layout_width="wrap_content"
+                android:text=" "
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="@dimen/_10sdp"
+                />
+            <TextView
+                android:id="@+id/row__order_item_textview_Qty"
+                style="@style/text_normal_black_18"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:visibility="visible"
+                android:textColor="@color/parrot_green"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/row_my_order_relative_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_my_order_relative_top"
+            android:padding="@dimen/_1sdp">
+
+            <TextView
+                android:id="@+id/row__order_item_textview_medicine_description"
+                style="@style/text_normal_black_18"
+                android:layout_width="@dimen/_200sdp"
+                android:text=""
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:singleLine="false"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="@dimen/_10sdp"
+                />
+
+
+            <TextView
+                android:id="@+id/row__order_item_textview_price"
+                style="@style/text_normal_black_18"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/parrot_green"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

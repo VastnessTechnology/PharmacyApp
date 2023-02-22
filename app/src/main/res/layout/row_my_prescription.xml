@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RelativeLayout xmlns:android='http://schemas.android.com/apk/res/android'
+    android:layout_width="wrap_content"
+    android:background="@drawable/image_border"
+    android:padding="@dimen/_5sdp"
+    android:layout_margin="@dimen/_2sdp"
+    android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id='@+id/row_my_prescription_imageview'
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:scaleType="fitCenter"
+            android:src='@drawable/ic_launcher' />
+
+        <CheckBox
+            android:id='@+id/row_my_prescription_checkbox'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight='@+id/row_my_prescription_imageview'
+            android:layout_centerVertical='true'/>
+
+</RelativeLayout>

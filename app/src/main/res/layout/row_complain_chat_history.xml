@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_2sdp">
+
+
+    <TextView
+        android:id="@+id/row_complain_chat_textview_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:background="@drawable/text_bg"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_11sdp"
+        android:padding="@dimen/_7sdp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/row_complain_chat_history_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/row_complain_chat_textview_date"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:background="@drawable/chat_blue"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/row_complain_chat_history_user_Msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aaa"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_10sdp"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/row_complain_chat_history_user_textview_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_complain_chat_history_user_Msg"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="bottom|end"
+            android:text="10 "
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_7sdp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/row_complain_chat_history_admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_complain_chat_history_user"
+        android:layout_marginRight="@dimen/_40sdp"
+        android:background="@drawable/chat_grey"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/row_complain_chat_history_textview_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="@dimen/_3sdp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/row_complain_chat_history_textview_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/row_complain_chat_history_textview_admin"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="bottom|end"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_7sdp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

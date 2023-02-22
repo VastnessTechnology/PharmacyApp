@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_preference_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_preference_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_preference_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_preference_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/fragment_preference_tootlbar_view"
+        android:fadingEdge="none"
+        android:isScrollContainer="false"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/fragment_preference_linear_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/fragment_preference_linear_push_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:weightSum="100">
+
+
+                    <TextView
+                        android:id="@+id/fragment_preference_textview_push_notification"
+                        style="@style/text_normal_grey_18"
+                        android:layout_width="0dp"
+                        android:layout_weight="80"
+                        android:text="@string/notification_push_notification"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <Switch
+                        android:id="@+id/fragment_preference_togglebutton_promotional"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

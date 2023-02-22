@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_myprescription_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+
+    <include
+        android:id="@+id/fragment_myprescription_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_myprescription_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/fragment_myprescription_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_myprescription_relative_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_3sdp"
+        android:layout_above="@+id/fragment_myprescription_textview_submit"
+        android:layout_below="@+id/fragment_myprescription_tootlbar_view"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/fragment_myprescription_relative_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/nodata"
+                 />
+
+            <TextView
+                android:id="@+id/fragment_myprescription_textview_cart_empty"
+                style="@style/text_normal_black_18"
+                android:padding="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/nofoundpriscription"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="visible" />
+
+            <TextView
+                style="@style/text_normal_white_18"
+                android:layout_width="@dimen/_250sdp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible"
+                android:textColor="@color/toolbar_title"
+                android:text="@string/please_check_later"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/fragment_myprescription_scrlView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+
+
+        <RelativeLayout
+            android:id="@+id/fragment_myprescription_relative_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_margin="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/fragment_myprescription_textview_msg"
+                style="@style/text_normal_white_18"
+                android:layout_width="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="right"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible"
+                android:textColor="@color/toolbar_title"
+                android:text="@string/pre_msg_select"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_myprescription_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fragment_myprescription_textview_msg"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/fragment_myprescription_textview_submit"
+        style="@style/text_normal_white_18"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/commmon_button"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/done" />
+
+
+</RelativeLayout>

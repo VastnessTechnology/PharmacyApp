@@ -1,0 +1,31 @@
+package com.vgroyalchemist.requestobjects;
+
+
+import org.json.JSONObject;
+
+public class PresOrderListInfo extends ParentRequestVO {
+
+
+    String mStringUserId = "";
+
+
+    public PresOrderListInfo(String mStringUserId) {
+        this.mStringUserId = mStringUserId;
+
+    }
+
+    @Override
+    public JSONObject generateRequest() {
+
+        JSONObject dataJSONTemp = new JSONObject();
+        try {
+            dataJSONTemp.put("UserId",mStringUserId);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return dataJSONTemp;
+    }
+}

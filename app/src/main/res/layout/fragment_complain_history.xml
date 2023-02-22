@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_complain_history_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include
+        android:id="@+id/fragment_complain_history_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_complain_history_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_complain_history_tootlbar"
+        android:background="@color/seperator_color" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_complain_history_listview_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fragment_complain_history_lnedtmessage"
+        android:layout_below="@+id/fragment_complain_history_tootlbar_view"
+        android:paddingBottom="@dimen/_10sdp"
+        android:scrollbars="vertical"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:id="@+id/fragment_complain_history_lnedtmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:weightSum="100">
+
+        <EditText
+            android:id="@+id/fragment_complain_history_edit_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_vertical"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_weight="80"
+            android:background="@drawable/chateditboxbg"
+            android:hint="Type a Message"
+            android:inputType="textCapSentences"
+            android:maxLines="6"
+            android:padding="@dimen/_8sdp"
+            android:textSize="@dimen/_10sdp"
+            android:autofillHints="" />
+
+
+        <ImageView
+            android:id="@+id/fragment_complain_history_tvsend"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_weight="20"
+            android:background="@drawable/commmon_button"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:src="@drawable/sendicon" />
+
+    </LinearLayout>
+</RelativeLayout>

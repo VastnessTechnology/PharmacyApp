@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/row_rating_review_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rowshadow"
+        android:layout_margin="@dimen/_8sdp"
+        android:padding="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:id="@+id/row_rating_review_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/parrot_green"
+            android:gravity="center"
+            android:minWidth="@dimen/_40sdp">
+
+            <ImageView
+                android:id="@+id/row_rating_review_imageview_star"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:padding="@dimen/_2sdp"
+               android:src="@drawable/ic_rating_star"/>
+
+            <TextView
+                android:id="@+id/row_rating_review_textview_start"
+                style="@style/text_normal_black_18"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/row_rating_review_imageview_star"
+                android:textColor="@color/white"
+                android:text="5"
+                android:textSize="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/row_rating_review_linear_catalog_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_toRightOf="@+id/row_rating_review_star"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/row_rating_review_linear_catalog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/row_rating_review_textview_title_uesrname"
+                    style="@style/text_normal_black_18"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/row_rating_review_textview_msg"
+                        style="@style/text_normal_black_18"
+                        android:layout_width="match_parent"
+                        android:layout_toLeftOf="@+id/row_rating_review_relative_button"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:maxLines="3"
+                        android:singleLine="false"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/row_rating_review_relative_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/row_rating_review_textview_msg"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:id="@+id/row_rating_review_textview_more"
+                            style="@style/text_normal_black_18"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:ellipsize="end"
+                            android:gravity="bottom|right"
+                            android:singleLine="false"
+                            android:text="More"
+                            android:textColor="@color/parrot_green"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/row_rating_review_textview_less"
+                            style="@style/text_normal_black_18"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:ellipsize="end"
+                            android:gravity="bottom|right"
+                            android:singleLine="false"
+                            android:text="less"
+                            android:textColor="@color/parrot_green"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/row_rating_review_linear_user_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/row_rating_review_textview_date"
+                    style="@style/text_normal_black_18"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_select_address_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_select_address_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_select_address_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_select_address_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_select_address_relative_title"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/fragment_select_address_tootlbar_view"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+
+        <TextView
+            android:id="@+id/fragment_select_address_textview_title"
+            style="@style/text_normal_black_18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="@string/shipping_address"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/fragment_select_address_textview_add_address"
+            style="@style/text_normal_black_18"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="@string/add_new"
+            android:textColor="@color/parrot_green"
+            android:textSize="@dimen/_13sdp" />
+
+        <LinearLayout
+            android:id="@+id/fragment_select_address_relative_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_below="@+id/fragment_select_address_textview_add_address"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/fragment_select_address_textview_empty"
+                style="@style/text_normal_black_18"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/_2sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:singleLine="false"
+                android:textColor="@color/nev_title_color"
+                android:text="@string/nofoundpriscription"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_select_address_relative_main"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/fragment_select_address_relative_title"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_above="@+id/fragment_select_address_textview_submit"
+        android:layout_marginTop="@dimen/_2sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_select_address_recycleview"
+            android:padding="@dimen/_5sdp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fragment_select_address_textview_submit"
+        style="@style/text_normal_white_18"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/commmon_button"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/confrom" />
+</RelativeLayout>

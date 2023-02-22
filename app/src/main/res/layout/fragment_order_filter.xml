@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_my_orderlist_filter_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_my_orderlist_filter_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_my_orderlist_filter_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_my_orderlist_filter_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_my_orderlist_filter_relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/fragment_my_orderlist_filter_tootlbar_view"
+        android:layout_margin="@dimen/_3sdp">
+
+
+        <RelativeLayout
+            android:id="@+id/fragment_my_orderlist_filter_linear_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/fragment_my_orderlist_filter_textview_title"
+                style="@style/text_normal_black_18"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@color/dark_white_color"
+                android:maxLines="2"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:singleLine="false"
+                android:text="@string/order_filter"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="visible" />
+
+
+
+            <RadioGroup
+                android:id="@+id/fragment_my_orderlist_filter_radiogroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_my_orderlist_filter_textview_title"
+                android:padding="@dimen/_5sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:divider="?android:attr/dividerHorizontal"
+                android:orientation="vertical"/>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_my_orderlist_filter_linear_radiobutton_time_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@+id/fragment_my_orderlist_filter_linear_radiobutton"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/fragment_my_orderlist_filter_textview_title_time_filter"
+                style="@style/text_normal_black_18"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@color/dark_white_color"
+                android:maxLines="2"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:singleLine="false"
+                android:text="@string/time_filter"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="visible" />
+
+
+            <RadioGroup
+                android:id="@+id/fragment_my_orderlist_filter_radiogroup_Time_filter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_below="@+id/fragment_my_orderlist_filter_textview_title_time_filter"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_alignParentLeft="true"
+                android:divider="?android:attr/dividerHorizontal"
+                android:orientation="vertical"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fragment_my_orderlist_filter_textview_apply"
+        style="@style/text_normal_white_18"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/commmon_button"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="@dimen/_10sdp"
+        android:text="Apply" />
+</RelativeLayout>

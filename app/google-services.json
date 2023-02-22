@@ -1,0 +1,108 @@
+{
+  "project_info": {
+    "project_number": "1071800474981",
+    "project_id": "pharmacy-6452d",
+    "storage_bucket": "pharmacy-6452d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071800474981:android:f7c2e35f564b3f4a99158c",
+        "android_client_info": {
+          "package_name": "com.pharmacyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071800474981-150j77676tdjv3dqkksobqbbqvo5etuu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pharmacyapp",
+            "certificate_hash": "f89475052481dc095003498d301d03187ea8c246"
+          }
+        },
+        {
+          "client_id": "1071800474981-i29u2cucegsvq4utfvfq337269u1kbht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pharmacyapp",
+            "certificate_hash": "d2bdc683e66ea0fb3a65f5fee9bb8f486b5f9ecc"
+          }
+        },
+        {
+          "client_id": "1071800474981-s2kfcbs74uf9c8v6m959osui99ovuq8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pharmacyapp",
+            "certificate_hash": "985cc5eee45567f8fdc7c65143e9fabf8470d1e2"
+          }
+        },
+        {
+          "client_id": "1071800474981-cnjgr7ts6vja0i547d7e6rdcg5sqmtdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRiSAUU4u56LqFRpF6lFNLlhoXD2Hpcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071800474981-cnjgr7ts6vja0i547d7e6rdcg5sqmtdp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1071800474981-qli04e40ja08dlko3h89e8cm21t2d3s7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vastnesstechonolgy.VGRoyalChemist",
+                "app_store_id": "123456789"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071800474981:android:b25f35745668ffd299158c",
+        "android_client_info": {
+          "package_name": "com.vgroyalchemist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071800474981-cnjgr7ts6vja0i547d7e6rdcg5sqmtdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRiSAUU4u56LqFRpF6lFNLlhoXD2Hpcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071800474981-cnjgr7ts6vja0i547d7e6rdcg5sqmtdp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1071800474981-qli04e40ja08dlko3h89e8cm21t2d3s7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vastnesstechonolgy.VGRoyalChemist",
+                "app_store_id": "123456789"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

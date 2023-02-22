@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:clickable="false"
+    android:focusable="false"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/row_suggestion_relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rowshadow"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/row_details_medicine_relative"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/row_details_medicine_name"
+                android:text=""
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/parrot_green"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/row_details_medicine_tablet"
+                android:text=""
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/gray"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/row_details_medicine_relative"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/row_details_medicine_company_name"
+                android:text=""
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/toolbar_title"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/row_details_medicine_save_value"
+                android:text="Save 10%"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/save"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

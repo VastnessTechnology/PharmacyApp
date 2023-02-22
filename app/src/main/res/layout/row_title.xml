@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/row_name_category_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/row_name_textview_name"
+            style="@style/text_normal_black_18"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:padding="@dimen/_10sdp"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textSize="@dimen/_10sdp" />
+    </RelativeLayout>
+
+</RelativeLayout>

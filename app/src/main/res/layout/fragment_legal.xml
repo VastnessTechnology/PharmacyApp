@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_legal_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+
+    <include
+        android:id="@+id/fragment_legal_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_legal_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_legal_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_legal_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_legal_tootlbar_view"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/fragment_legal_linear_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fragment_legal_imageview_Privacy_Policy_logo"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/privacy_policy" />
+
+            <TextView
+                android:id="@+id/fragment_legal_textview_Privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/fragment_legal_imageview_Privacy_Policy_logo"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/nev_title_color"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <ImageView
+                android:id="@+id/fragment_profile_imageview_Privacy_policy"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/roundshadowshape"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_forward" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_legal_linear_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/fragment_legal_linear_privacy_policy"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fragment_legal_imageview_condition_logo"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/teams_cond" />
+
+            <TextView
+                android:id="@+id/fragment_legal_textview_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/fragment_legal_imageview_condition_logo"
+                android:text="@string/terms_condition"
+                android:textColor="@color/nev_title_color"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <ImageView
+                android:id="@+id/fragment_legal_imageview_condition"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/roundshadowshape"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_forward" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_legal_linear_return_refund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:layout_below="@+id/fragment_legal_linear_condition"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fragment_legal_imageview_return_refund_logo"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/return_refund" />
+
+            <TextView
+                android:id="@+id/fragment_legal_profile_textview_return_refund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/fragment_legal_imageview_return_refund_logo"
+                android:text="@string/return_policy"
+                android:textColor="@color/nev_title_color"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <ImageView
+                android:id="@+id/fragment_legal_imageview_return_refund"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/roundshadowshape"
+                android:padding="@dimen/_5sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_forward" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+
+
+
+Alish name :- VGPharmacy
+key storePasswor :- VGPharmacy
+key password :- VGPharmacy
+
+
+fb hash key :-sy+sKGgW2JdNVn/+RLLTZNDEIRI=
+
+
+
+
+Google :-
+Alias name: VGPharmacy
+Creation date: 25 Mar, 2021
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=VGPharmacy
+Issuer: CN=VGPharmacy
+Serial number: 3919a68f
+Valid from: Thu Mar 25 13:08:19 IST 2021 until: Mon Mar 19 13:08:19 IST 2046
+Certificate fingerprints:
+         SHA1: D2:BD:C6:83:E6:6E:A0:FB:3A:65:F5:FE:E9:BB:8F:48:6B:5F:9E:CC
+         SHA256: 74:FB:D5:AD:25:BD:3E:F1:C6:45:93:43:83:4A:E2:E0:48:0D:C1:C6:0B:E1:12:31:5D:7E:0D:50:D5:5C:8D:CD
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 85 89 D5 4F 36 05 82 8F   BC 8A 84 F4 69 87 11 96  ...O6.......i...
+0010: E5 8B 27 CF                                        ..'.
+]
+]

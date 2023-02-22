@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/row_articles_relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/rowshadow"
+        android:padding="@dimen/_2sdp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/row_articles_linear_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/row_articles_textview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:id="@+id/row_articles_imageview_relative"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:layout_below="@+id/row_articles_textview_title"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/row_articles_imageview_banner_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/logo"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/row_articles_imageview_banner_video"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/play"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/row_articles_imageview_bookmark"
+                style="@style/text_normal_white_18"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@+id/row_articles_textview_title"
+                android:layout_alignRight="@id/row_articles_imageview_relative"
+                android:gravity="center"
+                android:background="@drawable/shape_circle_whitenew"
+                android:src="@drawable/ic_bookmark"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/row_articles_imageview_bookmark_addbook"
+                style="@style/text_normal_white_18"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_below="@+id/row_articles_textview_title"
+                android:layout_alignRight="@id/row_articles_imageview_relative"
+                android:gravity="center"
+                android:background="@drawable/shape_circle_whitenew"
+                android:src="@drawable/ic_add_bookmark"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

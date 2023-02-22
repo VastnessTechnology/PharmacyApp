@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_serach_subsitutes_leanr_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <include
+        android:id="@+id/fragment_serach_subsitutes_leanr_main_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_serach_subsitutes_leanr_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_serach_subsitutes_leanr_main_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_serach_subsitutes_relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_below="@+id/fragment_serach_subsitutes_leanr_main_view"
+        android:background="@android:drawable/editbox_background"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/fragment_serach_subsitutes_imageview_serach"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_search"
+            android:visibility="visible" />
+
+        <AutoCompleteTextView
+            android:id="@+id/fragment_serach_subsitutes_edittext_search"
+            style="@style/edittext_normal_black_15"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/fragment_serach_subsitutes_imageview_serach"
+            android:digits="@string/input_key"
+            android:hint="@string/hint_search_products"
+            android:imeOptions="actionSearch"
+            android:inputType="text" />
+
+        <requestFocus />
+
+        <ImageView
+            android:id="@+id/fragment_search_screen_imageview_cancel"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_close"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_search_screen_listview_data_intelligent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_serach_subsitutes_relative_main"
+        android:background="@android:color/white"
+        android:cacheColorHint="@android:color/white"
+        android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_search_screen_listview_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_serach_subsitutes_relative_main"
+        android:background="@android:color/white"
+        android:cacheColorHint="@android:color/white"
+        android:divider="@null"
+        android:dividerHeight="0.5dp"
+        android:visibility="gone">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <TextView
+        android:id="@+id/fragment_search_screen_textview_no_data"
+        style="@style/text_normal_black_18"
+        android:layout_below="@+id/fragment_serach_subsitutes_relative_main"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/_5sdp"
+        android:layout_centerInParent="true"
+        android:text="@string/search_result_not_found"
+        android:visibility="gone" />
+
+    <com.vgroyalchemist.CommonClass.CircularProgressBar
+        android:id="@+id/fragment_search_screen_pgbProductList"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/fragment_serach_subsitutes_relative_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:indeterminate="true"
+        android:indeterminateOnly="false"
+        android:visibility="gone" />
+</RelativeLayout>

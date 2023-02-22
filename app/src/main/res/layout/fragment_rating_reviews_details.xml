@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_my_orderDetails_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_rating_reviews_details_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_rating_reviews_details_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_rating_reviews_details_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_rating_reviews_details_relative_top"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/fragment_rating_reviews_details_tootlbar_view"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/fragment_rating_reviews_details_relative_product_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fragment_rating_reviews_details_textview_name"
+                style="@style/text_normal_black_18"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:padding="@dimen/_5sdp"
+                android:textStyle="bold"
+
+                android:background="@color/dark_white_color"
+                android:singleLine="false"
+                android:text="@string/app_name"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_rating_reviews_details_relative_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_below="@+id/fragment_rating_reviews_details_relative_product_name"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/fragment_rating_reviews_details_view_average_rating"
+                style="@style/view_grey_color" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/fragment_rating_reviews_details_linear_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/fragment_rating_reviews_details_design_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:minWidth="@dimen/_50sdp"
+                            android:padding="@dimen/_1sdp">
+
+                            <ImageView
+                                android:id="@+id/fragment_rating_reviews_details_imageview_star"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                aandroid:srcCompat="@drawable/icon_star_white_review_filled" />
+
+                            <TextView
+                                android:id="@+id/fragment_rating_reviews_details_textview_star"
+                                style="@style/text_normal_black_18"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_7sdp"
+                                android:layout_toRightOf="@+id/fragment_rating_reviews_details_imageview_star"
+                                android:text="4.5"
+                                android:textStyle="bold"
+                                android:textColor="@color/parrot_green"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/view_grey_color"
+                    android:layout_width="0.7dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_weight="50"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_normal_black_18"
+                        android:layout_width="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text="@string/average_rating"
+                        android:textSize="@dimen/_10sdp" />
+
+
+
+                    <TextView
+                        android:id="@+id/fragment_rating_reviews_details_textview_total_customers"
+                        style="@style/text_normal_black_18"
+                        android:layout_width="match_parent"
+                        android:ellipsize="end"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                style="@style/view_grey_color"
+                android:background="@color/gray"
+                android:layout_below="@+id/fragment_rating_reviews_details_textview_average_rating" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_rating_reviews_details_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_rating_reviews_details_relative_name"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/fragment_rating_reviews_title_textview"
+                style="@style/text_normal_black_18"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="@string/all_review"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_rating_reviews_details_recycleview"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_3sdp"
+            android:layout_below="@+id/fragment_rating_reviews_details_relative"
+         ></androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

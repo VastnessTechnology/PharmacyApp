@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#BBBBBB" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <layer-list>
+            <item>
+                <clip
+                    android:clipOrientation="vertical"
+                    android:gravity="bottom">
+                    <shape>
+                        <solid android:color="#79AF35" />
+                        <corners android:radius="10dp" />
+                    </shape>
+                </clip>
+            </item>
+            <item>
+                <clip
+                    android:clipOrientation="vertical"
+                    android:gravity="fill">
+                    <layer-list>
+                        <item>
+                            <shape
+                                android:innerRadiusRatio="3"
+                                android:shape="ring"
+                                android:thicknessRatio="22"
+                                android:useLevel="false">
+                                <stroke
+                                    android:width="2dp"
+                                    android:color="#D3D3D3"
+                                    />
+                            </shape>
+                        </item>
+                        <item android:top="@dimen/_80sdp">
+                            <shape
+                                android:innerRadiusRatio="3"
+                                android:shape="ring"
+                                android:thicknessRatio="22"
+                                android:useLevel="false">
+                            <stroke
+                                    android:width="2dp"
+                                    android:color="#D3D3D3" />
+                            </shape>
+                        </item>
+                        <item android:bottom="@dimen/_90sdp">
+                            <shape
+                                android:innerRadiusRatio="3"
+                                android:shape="ring"
+                                android:thicknessRatio="22"
+                                android:useLevel="false">
+                            <stroke
+                                    android:width="2dp"
+                                    android:color="#D3D3D3" />
+                            </shape>
+                        </item>
+                    </layer-list>
+                </clip>
+            </item>
+        </layer-list>
+    </item>
+</layer-list>

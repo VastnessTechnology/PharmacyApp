@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_my_orderlist_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_my_orderlist_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_my_orderlist_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_my_orderlist_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_my_orderlist_relative_main"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/fragment_my_orderlist_tootlbar_view"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_3sdp">
+
+
+
+        <TextView
+            android:id="@+id/fragment_my_orderlist_textview_Filter"
+            style="@style/text_normal_black_18"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:background="@drawable/rowshadow"
+            android:text="Filter"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_2sdp"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
+            aandroid:drawableStartCompat="@drawable/ic_filter_odr" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_my_orderlist_recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/fragment_my_orderlist_textview_Filter"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp" />
+
+            <TextView
+                android:id="@+id/fragment_my_orderlist_textview_nodata"
+                style="@style/text_normal_black_18"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/search_result_not_found"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

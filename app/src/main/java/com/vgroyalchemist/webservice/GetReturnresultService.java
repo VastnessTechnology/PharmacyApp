@@ -1,0 +1,133 @@
+package com.vgroyalchemist.webservice;
+
+import android.content.Context;
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.ProtocolException;
+
+import com.vgroyalchemist.requestobjects.GetReturnResonInfo;
+import com.vgroyalchemist.requestobjects.ReOrderInfo;
+import com.vgroyalchemist.requestobjects.ReturnReasonVO;
+import com.vgroyalchemist.utils.Tags;
+import com.vgroyalchemist.utils.Utility;
+import com.vgroyalchemist.utils.network.HttpConnector;
+import com.vgroyalchemist.vos.ServerResponseVO;
+import com.vgroyalchemist.vos.UserDetailsVO;
+
+ 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.SocketTimeoutException;
+import java.util.ArrayList;
+
+
+public class GetReturnresultService {
+
+    public JSONObject generateRequestJSON() {
+
+        JSONObject requestObject = null;
+        JSONObject mObject = null;
+        RequestFactory mRequestFactory = new RequestFactory();
+        GetReturnResonInfo mGetReturnResonInfo = new GetReturnResonInfo();
+        try {
+            requestObject = mRequestFactory.getFinalRequestObject(mGetReturnResonInfo);
+            try {
+                mObject =  requestObject.getJSONObject("data");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        }
+
+        return mObject;
+    }
+
+    public ServerResponseVO getresonreturn(Context context, String url) {
+        ServerResponseVO serverResponseVO = new ServerResponseVO();
+
+        try {
+            JSONObject requestJSON = generateRequestJSON();
+
+            JSONObject responseJSON = sendRequest(url, requestJSON, context);
+            Utility.debugger("VT get reson return ....." + url);
+            Utility.debugger("VT get reson return request....." + requestJSON);
+            Utility.debugger("VT responseJSON  get reson return..... " + responseJSON);
+            if (responseJSON != null) {
+                serverResponseVO.setStatus(responseJSON.getString(Tags.PARAM_STATUS));
+                serverResponseVO.setMsg(responseJSON.getString(Tags.PARAM_MSG));
+
+                ReturnReasonVO returnReasonVO = new ReturnReasonVO();
+                ArrayList<ReturnReasonVO> voArrayList = new ArrayList<ReturnReasonVO>();
+
+                try {
+                    JSONObject responseData = responseJSON.getJSONObject("details");
+                    JSONArray returnReasonVOArrayList = responseData.getJSONArray("detailary");
+
+
+                    for (int A = 0; A < returnReasonVOArrayList.length(); A++) {
+                        returnReasonVO = new ReturnReasonVO();
+
+                        JSONObject arrayListJSONObject = returnReasonVOArrayList.getJSONObject(A);
+
+                        try {
+                            returnReasonVO.setReason(arrayListJSONObject.optString("Reason"));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        try {
+                            returnReasonVO.setReasonId(arrayListJSONObject.optString("ReasonId"));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        voArrayList.add(returnReasonVO);
+
+                    }
+                    serverResponseVO.setData(voArrayList);
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return serverResponseVO;
+    }
+
+    public JSONObject sendRequest(String url, JSONObject requestObject, Context context) throws
+            Exception {
+        JSONObject responseObject = null;
+        ArrayList<Long> list = new ArrayList<Long>(0);
+        try {
+            responseObject = HttpConnector.getJSONObject(url, requestObject);
+        } catch (MalformedURLException mue) {
+            Utility.debugger("MalformedURLException");
+            mue.printStackTrace();
+            throw mue;
+        } catch (SocketTimeoutException ste) {
+            Utility.debugger("SocketTimeoutException");
+            ste.printStackTrace();
+            throw ste;
+        } catch (IOException ioe) {
+            Utility.debugger("IOException");
+            ioe.printStackTrace();
+            throw ioe;
+        } catch (JSONException je) {
+            Utility.debugger("JSONException");
+            je.printStackTrace();
+            throw je;
+        } catch (Exception e) {
+            Utility.debugger("Exception");
+            e.printStackTrace();
+            throw e;
+        } finally {
+            //return isError;
+        }
+        return responseObject;
+    }
+}

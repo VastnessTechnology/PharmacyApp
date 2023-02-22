@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_payment_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_payment_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_payment_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_payment_tootlbar"
+        android:background="@color/seperator_color" />
+
+
+    <ScrollView
+        android:id="@+id/fragment_payment_scrlView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_payment_tootlbar_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/fragment_payment_relative_main_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/fragment_payment_scrlView"
+            android:visibility="visible">
+
+
+            <RelativeLayout
+                android:id="@+id/fragment_payment_relative_title_payemt_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/fragment_payment_textview_paymentmode_title"
+                    style="@style/text_normal_black_18"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/paymentmode"
+                    android:textSize="@dimen/_13sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_payment_linear_payemt_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragment_payment_relative_title_payemt_mode"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RadioGroup
+                    android:id="@+id/fragment_payment_relative_title_payemt_mode_radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RadioButton
+                        android:id="@+id/fragment_payment_relative_title_payemt_mode_radio_cod"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rowshadow"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/ic_cod_pay"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:padding="@dimen/_7sdp"
+                        android:text="@string/cod_text"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                    <RadioButton
+                        android:id="@+id/fragment_payment_relative_title_payemt_mode_radio_rozerPay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/rowshadow"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/ic_roz_pay"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:padding="@dimen/_7sdp"
+                        android:text="@string/razorpay"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/fragment_order_Search_summary_textview_submit"
+        style="@style/text_normal_white_18"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/commmon_button"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/confrom_order"
+        android:visibility="visible" />
+</RelativeLayout>

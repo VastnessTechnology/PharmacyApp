@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:padding="@dimen/_20sdp">
+
+    <LinearLayout
+        android:id="@+id/popup_notification_relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rowshadow"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/popup_notification_textview_title"
+            style="@style/text_normal_black_18"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="false"
+            android:text="@string/app_name"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            style="@style/view_grey_color"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/popup_notification_textview_error_password"
+            android:background="@color/dark_grey" />
+
+        <TextView
+            android:id="@+id/popup_notification_textview_message"
+            style="@style/text_normal_black_18"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:minHeight="@dimen/_100sdp"
+            android:padding="@dimen/_3sdp"
+            android:singleLine="false"
+            android:text="@string/app_name"
+            android:textSize="@dimen/_13sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/popup_notification_view"
+            android:background="@color/parrot_green"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/popup_notification_textview_submit"
+                style="@style/text_normal_black_18"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/dialog_ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

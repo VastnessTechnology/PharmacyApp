@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_rating_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_rating_reviews_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_rating_reviews_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_rating_reviews_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_rating_reviews_tootlbar_view"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/fragment_rating_reviews_relative_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:id="@+id/fragment_rating_reviews_relative_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:id="@+id/fragment_rating_review_imageview"
+                        android:src="@drawable/ic_med"/>
+
+                    <TextView
+                        android:id="@+id/fragment_rating_reviews_textview_name"
+                        style="@style/text_normal_black_18"
+                        android:layout_width="match_parent"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:layout_toRightOf="@+id/fragment_rating_review_imageview"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:text=""
+                        android:textSize="@dimen/_10sdp"
+                        android:lines="2"
+                        android:singleLine="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/fragment_suggestion_linear_ratings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment_rating_reviews_relative_name"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RatingBar
+                        android:id="@+id/fragment_rating_reviews_ratingbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:numStars="5"
+                        android:stepSize="1" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/fragment_rating_reviews_relative_middle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fragment_rating_reviews_input_layout_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <EditText
+                        android:id="@+id/fragment_rating_reviews_edittext_review"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="@string/input_key"
+                        android:gravity="top"
+                        android:imeOptions="actionDone"
+                        android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                        android:lines="4"
+                        android:hint="Write a message..."
+                        android:padding="@dimen/_3sdp"
+                        android:textColorHint="@color/parrot_green"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/_10sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/fragment_rating_reviews_textview_submit"
+                style="@style/text_normal_black_18"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/commmon_button"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_7sdp"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

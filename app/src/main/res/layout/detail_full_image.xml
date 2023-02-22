@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical">
+
+<!--    <it.sephiroth.android.library.imagezoom.ImageViewTouch-->
+<!--        android:id="@+id/detail_full_bigimageview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_centerInParent="true" />-->
+
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
+        android:id="@+id/detail_full_bigimageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+
+        />
+
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/detail_full_video"/>
+
+
+
+
+    <!--<com.github.piasy.biv.view.BigImageView-->
+        <!--android:id="@+id/detail_full_bigimageview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:clickable="true"-->
+        <!--app:initScaleType="auto"-->
+        <!--app:optimizeDisplay="false">-->
+
+    <!--</com.github.piasy.biv.view.BigImageView>-->
+
+</RelativeLayout>

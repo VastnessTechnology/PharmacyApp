@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_Write_complain_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_Write_complain_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_Write_complain_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_Write_complain_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragment_Write_complain_tootlbar_view"
+        android:layout_above="@+id/fragment_Write_complain_textview_submit"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/fragment_Write_complain_relative_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/fragment_Write_complain_textview_orderNo"
+                style="@style/text_normal_black_18"
+                android:layout_width="match_parent"
+                android:text=""
+                android:textSize="@dimen/_10sdp"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/fragment_Write_complain_textview_medicine_name"
+                style="@style/text_normal_black_18"
+                android:layout_width="match_parent"
+                android:text=""
+                android:layout_below="@+id/fragment_Write_complain_textview_orderNo"
+                android:textSize="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:singleLine="true" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragment_Write_complain_input_layout_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fragment_Write_complain_textview_medicine_name"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <EditText
+                    android:id="@+id/fragment_Write_complain_edittext_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="@string/input_key"
+                    android:gravity="top"
+                    android:imeOptions="actionDone"
+                    android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                    android:lines="4"
+                    android:hint="Write a Complaint message...*"
+                    android:padding="@dimen/_3sdp"
+                    android:textColorHint="@color/parrot_green"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/fragment_Write_complain_textview_submit"
+        style="@style/text_normal_black_18"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@drawable/commmon_button"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/_7sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp" />
+</RelativeLayout>

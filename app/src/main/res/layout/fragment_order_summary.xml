@@ -1,0 +1,346 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_order_summary_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_order_summary_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_order_summary_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_order_summary_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <ScrollView
+        android:id="@+id/fragment_order_summary_scrlView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_order_summary_textview_submit"
+        android:layout_below="@+id/fragment_order_summary_tootlbar_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/fragment_order_summary_relative_main_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_order_summary_tootlbar_view"
+            android:layout_margin="@dimen/_5sdp">
+
+
+            <RelativeLayout
+                android:id="@+id/fragment_order_summary_relative_address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fragment_order_summary_textview_add_address_title"
+                    style="@style/text_normal_black_18"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/delivery_address"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/fragment_order_summary_textview_add_address_chnage"
+                    style="@style/text_normal_black_18"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/chnage_address"
+                    android:textColor="@color/parrot_green"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/fragment_order_summary_textview_add_address"
+                    style="@style/text_normal_black_18"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/add_address"
+                    android:textColor="@color/parrot_green"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_order_summary_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fragment_order_summary_relative_address_title"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/fragment_order_summary_linear_Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/rowshadow"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:weightSum="100">
+
+
+                        <LinearLayout
+                            android:id="@+id/fragment_order_summary_get_address_details_linear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="90"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/fragment_order_summary_textview_address_houseNo"
+                                style="@style/text_normal_black_18"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:text=""
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/fragment_order_summary_textview_address_one"
+                                style="@style/text_normal_black_18"
+                                android:maxLines="2"
+                                android:singleLine="false"
+                                android:text=""
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/fragment_order_summary_textview_address_pincode"
+                                style="@style/text_normal_black_18"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text=""
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/fragment_order_summary_get_address_edit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/fragment_order_summary_address_imageview_edit"
+                                style="@style/imageview_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="right"
+                                android:src="@drawable/ic_edit" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/fragment_order_summary_relative_prescrption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment_order_summary_linear_Address">
+
+                    <TextView
+                        android:id="@+id/fragment_order_summary_textview_prescription_title"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/order_as_prescritpion"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/fragment_order_summary_linear_add_prescrption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fragment_order_summary_relative_prescrption"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/rowshadow"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/fragment_order_summary_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/fragment_order_summary_textview_prescription_attech"
+                        style="@style/text_normal_black_18"
+                        android:layout_below="@+id/fragment_order_summary_recyclerview"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:text="@string/view_prescription"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@+id/fragment_order_summary_recyclerview"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@+id/fragment_order_summary_textview_prescription_attech">
+
+                        <ImageView
+                            android:id="@+id/fragment_order_summary_imageview_prescription_attech_dwon_arrow"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:background="@drawable/roundshadowshape"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_dwon_arrow"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/fragment_order_summary_imageview_prescription_attech_up_arrow"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:background="@drawable/roundshadowshape"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_up_arrow"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/fragment_order_summary_relative_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment_order_summary_linear_add_prescrption">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@color/parrot_green"
+                        android:padding="@dimen/_3sdp"
+                        android:text="@string/order_summery_msg"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_order_summary_relative_title_payemt_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment_order_summary_relative_msg">
+
+                    <TextView
+                        android:id="@+id/fragment_order_summary_textview_paymentmode_title"
+                        style="@style/text_normal_black_18"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:text="@string/paymentmode"
+                        android:textSize="@dimen/_10sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_order_summary_linear_payemt_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fragment_order_summary_relative_title_payemt_mode"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/rowshadow"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_6sdp">
+
+                    <LinearLayout
+                        android:id="@+id/fragment_order_summary_Liner_cod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/fragment_order_summary_imageview_cod"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_cod_pay" />
+
+                        <TextView
+                            android:id="@+id/fragment_order_summary_textview_cod"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="@string/cod_text"
+                            android:textColor="@color/nev_sub_title_color"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/fragment_order_summary_textview_submit"
+        style="@style/text_normal_white_18"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/commmon_button"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone"
+        android:text="@string/confrom_order" />
+</RelativeLayout>

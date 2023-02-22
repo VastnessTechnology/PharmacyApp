@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aandroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_invoice_relative_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_invoice_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_invoice_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/fragment_invoice_tootlbar"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_invoice_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_1sdp"
+        android:layout_below="@+id/fragment_invoice_tootlbar_view"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_3sdp">
+
+        <WebView
+            android:id="@+id/fragment_invoice_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/idPDFView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+
+
+        <ProgressBar
+            android:id="@+id/fragment_invoice_progressBar"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateOnly="false"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

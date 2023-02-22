@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">vgpharma.vastnesstechnology.co.in</domain>
+        <domain includeSubdomains="true">vgportal.vastnesstechnology.co.in</domain>
+        <domain includeSubdomains="true">vgrcportal.vastnesstechnology.co.in</domain>
+        <domain includeSubdomains="true">drive.google.com</domain>
+        <domain includeSubdomains="true">122.170.0.183:9091</domain>
+        <domain includeSubdomains="true">122.170.0.183:9090</domain>
+        <domain includeSubdomains="true">192.168.1.22:9091</domain>
+        <domain includeSubdomains="true">192.168.1.22:9090</domain>
+        <domain includeSubdomains="true">vgapi.vgrc.in</domain>
+        <domain includeSubdomains="true">vgportal.vgrc.in</domain>
+
+    </domain-config>
+
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

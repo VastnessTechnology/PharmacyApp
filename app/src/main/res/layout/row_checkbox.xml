@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/row_checkbox_relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:padding="@dimen/_5sdp"
+        android:layout_margin="@dimen/_3sdp"
+        android:focusableInTouchMode="false">
+
+        <LinearLayout
+            android:id="@+id/row_checkbox_linear_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/row_checkbox_imageview"
+            style="@style/imageview_normal"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rectangle_small_filter"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/row_checkbox_imageview_selected"
+            style="@style/imageview_normal"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:background="@drawable/rectangle_small_filter"
+            android:layout_marginLeft="@dimen/_5sdp"
+            app:srcCompat="@drawable/checked_radio_button"
+            android:visibility="gone" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/row_checkbox_textview_reason_text"
+            style="@style/text_normal_black_18"
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_toRightOf="@id/row_checkbox_linear_image"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textSize="@dimen/_11sdp" />
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/view_grey_color"
+        android:layout_below="@+id/row_checkbox_relative_main" />
+
+</RelativeLayout>

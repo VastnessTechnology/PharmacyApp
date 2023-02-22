@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_coupon_relative_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dark_white_color"
+    android:clickable="true">
+
+    <include
+        android:id="@+id/fragment_coupon_tootlbar"
+        layout="@layout/comman_view" />
+
+    <View
+        android:id="@+id/fragment_coupon_tootlbar_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/fragment_coupon_tootlbar"
+        android:background="@color/seperator_color" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_coupon_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fragment_coupon_tootlbar_view">
+
+        <ListView
+            android:id="@+id/fragment_coupon_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="@dimen/_5sdp"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/fragment_coupon_textview_nodata"
+            style="@style/text_normal_black_18"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/search_result_not_found"
+            android:textSize="@dimen/_15sdp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
